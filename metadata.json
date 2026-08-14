@@ -1,0 +1,6 @@
+{
+  "name": "Günlük Bülten Oluşturucu",
+  "description": "Borsa ve finans piyasaları için A4 formatında baskıya ve PDF'e hazır Günlük Bülten hazırlama ve düzenleme uygulaması.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

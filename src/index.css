@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #0b4f8f;
+  --secondary: #1f6fb2;
+  --bg: #f4f7fa;
+  --ink: #1c2b39;
+  --accent: #2f8fd6;
+  --border: #d7dee5;
+}
+
+@layer utilities {
+  .up {
+    color: #1a8f3c !important;
+    font-weight: bold;
+  }
+  .down {
+    color: #c62828 !important;
+    font-weight: bold;
+  }
+}
+
+/* PRINT STYLES FOR EXACT A4 PDF OUTPUT */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #1c2b39 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide app navigation and editor sidebar during print */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Reset scale, margins and shadows for print */
+  .a4-wrapper {
+    width: 210mm !important;
+    height: 297mm !important;
+    padding: 10mm 9mm !important;
+    transform: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    page-break-after: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Ensure background colors and gradients print correctly */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+
